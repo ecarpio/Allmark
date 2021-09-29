@@ -1,0 +1,423 @@
+// Header 
+header {
+  background-color: $main-blue;
+  height: 100px;
+  width:100%;
+  overflow: hidden;
+
+  .grid-inline {
+    grid-template-columns: [first] 200px [line2] auto [line3] auto;
+    align-items: center;
+    grid-gap:16px;
+    width: 100%;
+  }
+
+  .header-logo {
+    background-color:$white;
+    padding:20px;
+    width:180px;
+    margin-right:30px;
+      img {
+        width:120px;
+      }
+  }
+
+  .main-nav {
+    @extend .montserrat;
+    font-size:1.125rem;
+
+    .mobile-close {display: none;}
+
+    ul {
+      padding:0px;
+      margin:0px;
+      li {
+        display: inline-block;
+        list-style-type: none;
+        margin-right:30px;
+        a {
+          color:$white;
+            &:hover {
+              color:sandybrown;
+            }
+        }
+
+        .social-mobile { display:none;}
+      }
+    }
+  }
+
+  .social {
+    justify-self: end;
+    padding-right:30px;
+    a {
+      color:$white;
+      font-size: 1.25rem;
+      margin-left:20px;
+
+        &:hover {
+          color:sandybrown;
+        }
+    }
+  }
+  .mobile-trigger {
+    color:$white;
+    justify-self: end;
+    align-self: center;
+    margin-top:10px;
+    font-size:2.5rem;
+    cursor: pointer;
+  }
+}
+
+// Hero
+.hero {
+  background-color:$black;
+  color:$white;
+  position: relative;
+  padding:0px;
+
+    .carousel-item {
+      position: relative;
+    }
+
+    .image-container {
+      padding:50px 0px;
+      z-index: 5;
+      position: absolute;
+      top:0px;
+      left:0;
+      bottom:0;
+      right:0;
+      display: block;
+      overflow: hidden;
+      background-size:cover; 
+      background-position: center center;
+        .faded-blue{
+          z-index: 1;
+          position: absolute;
+          top:0;
+          left:0;
+          bottom:0;
+          right:0;
+          background: rgb(5,53,84);
+          background: linear-gradient(90deg, rgba(5,53,84,1) 0%, rgba(5,53,84,1) 29%, rgba(0,212,255,0) 100%);
+        }
+
+        .texture-bg {
+          background-image: url('../images/texture-bg.png');
+          background-size:cover;
+          z-index: 2;
+          position: absolute;
+          top:0;
+          left:0;
+          bottom:0;
+          right:0;
+        }
+
+        img {
+          position: absolute;
+          top:0;
+          left:0;
+          width:100%;
+        }
+    }
+
+    .hero-splash {
+      top:0px;
+      padding:120px 60px;
+      margin:0px 100px;
+      width:600px;
+      text-align:center;
+      position: relative;
+      z-index: 10;
+      display: block;
+      h1 {
+        background-color:$white;
+        color:$main-blue;
+        display:inline-block;
+        padding:10px;
+        text-transform: uppercase;
+        margin:0px;
+        font-size:30px;
+        font-weight:700;
+        margin-bottom:15px;
+      }
+
+      h2 {
+        background-color:$main-blue;
+        color:$white;
+        font-size:18px;
+        padding:10px;
+        margin-bottom:0px;
+        display: inline-block;
+        &:after {
+          display: none;
+        }
+      }
+
+      .value {
+        color:$white;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+        font-size:50px;
+        font-weight: 700;
+        @extend .montserrat;
+        margin-bottom:20px;
+      }
+
+    }
+
+    .controls {
+      z-index: 20;
+    }
+}
+
+// Mini Contact
+.mini-contact {
+  padding:10px;
+    .container {
+      padding:10px;
+      grid-template-columns: [first] auto [line2] auto;
+      align-items: center;
+      grid-gap:16px;
+
+        .contact-blurb {
+          font-size:1.125rem;
+          font-weight:700;
+          @extend .montserrat;
+          color:$main-blue;
+        }
+
+        .contact-info {
+          align-self: end;
+          justify-self: end;
+            span {
+              display: inline-block;
+              margin-left:20px;
+              color:$main-blue;
+            }
+        }
+    }
+}
+
+// Properties
+.properties {
+  background-color: $light-blue;
+  
+  .property-grid {
+    margin:0 auto;
+  }
+  
+  .property-item {
+    width:100%;
+    max-width: 450px;
+    background-color:none;
+    margin-bottom:16px;
+    overflow: hidden;
+      &:hover {
+        img {
+          top:-30px;
+          height:120%;
+        }  
+        
+      }
+
+      img {
+        position: absolute;
+        top:0px;
+        bottom:0px;
+        height:100%;
+        @extend .slow-ease;
+      }
+
+      &.intro {
+        margin-top:60px;
+      }
+
+      &.property {
+        height:560px;
+        border:1px solid #b1b1b1;
+        border-radius: 10px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        
+
+          &:nth-child(2) {
+            margin-top:64px;
+          }
+
+          .property-info {
+            position: relative;
+            z-index: 10;
+            margin-bottom: 40px;
+            width:90%;
+            padding:20px 15px;
+            background-color:$white;
+            box-shadow: 3px 3px 6px rgba(0,0,0,0.25);
+            border-radius: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-gap:16px;
+            @extend .slow-ease;
+              span {
+                display: block;
+
+                  &.property-name {
+                    color:$main-blue;
+                    font-size:1.125rem;
+                    font-weight: 700;
+                  }
+              }
+          }
+      }
+  } 
+  
+}
+
+//Our Company
+.our-company {
+  quote {
+    @extend .montserrat;
+    font-weight: 700;
+    font-style: italic;
+    color:$main-blue;
+    font-size:2.25rem;
+    line-height: 2.25rem;
+    position: relative;
+    margin:40px 0px 40px 30px;
+    display: inline-block;
+      &:before {
+        content:'"';
+        display:block;
+        font-size: 5rem;
+        position: absolute;
+        top:0px;
+        left:-50px;
+      } 
+  
+      &:after {
+        content:'"';
+        display:block;
+        font-size: 5rem;
+        position: absolute;
+        top:30px;
+        right:-40px;
+      } 
+  }
+
+  .splash-image{
+    overflow: hidden;
+    height:100%;
+    position: relative;
+
+      img {
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+
+        bottom:0px;
+      }
+  }
+}
+
+
+// Our Team
+.our-team {
+  background-color:$light-blue;
+  .team {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 16px;
+    .item {
+      text-align: center;
+      margin-bottom:32px;
+      justify-self: center;
+      text-align: center;
+
+      &.intro {
+        align-self: start;
+        text-align: left;
+      }
+
+      .avatar {
+        background-color:$black;
+        width:200px;
+        height:200px;
+        border-radius: 50%;
+        border:1px solid $light-gray;
+        overflow: hidden;
+        position: relative;
+        margin:auto;
+        margin-bottom: 20px;
+
+          img {
+            position: absolute;
+            top:0px;
+            left:-20px;
+            width:120%;
+          }
+      }
+
+      .name {
+        font-weight:700;
+        color:$main-blue;
+      }
+
+      .title {
+        height:40px;
+      }
+    }
+  }
+}
+
+// Contacts
+.contacts {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding:0px;
+  overflow: hidden;
+
+    .form {
+      padding:96px 60px;
+      padding-bottom:200px;
+      box-shadow:5px 0px 10px rgba(0,0,0,0.25);
+      position: relative;
+      z-index: 10;
+
+        strong {
+          color:$main-blue;
+          font-size:1.125rem;
+        }
+
+        input { 
+          width:100%;
+        }
+
+        textarea {
+          width:100%;
+        }
+    }
+}
+
+// Footer
+footer {
+  background-color:$main-blue;
+  color:$white;
+  padding:20px 0px;
+
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: end;
+
+        .social {
+          font-size: 1.5rem;
+          justify-self: end;
+
+            a {
+              margin-left:20px;
+            }
+        }
+    }
+}

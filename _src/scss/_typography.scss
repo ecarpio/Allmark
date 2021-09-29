@@ -1,0 +1,125 @@
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+
+body,
+html {
+  @extend .roboto;
+
+  font-size: 16px;
+  color: $charcoal;
+}
+
+h1 {
+  @extend .montserrat;
+}
+
+h2 {
+  @extend .montserrat;
+  font-size: 2.125rem;
+  font-weight: 700;
+  color: $main-blue;
+  margin-bottom: 30px;
+
+    &:after {
+      content:"";
+      display:block;
+      margin-top:20px;
+      background-color: $main-blue;
+      height:4px;
+      width:120px;
+    }
+}
+
+h3 {
+  @extend .montserrat;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: $black;
+  margin-bottom: 20px;
+}
+
+h4 {
+  @extend .montserrat;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: $secondary-blue;
+  margin-bottom: 15px;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+.main-paragraph {
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+q {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: $brand-blue;
+  background: $light-gray;
+  padding: 20px;
+  margin: 15px 0px;
+  display: block;
+  @extend .roboto;
+
+  &:before {
+    font-family: "Font Awesome 5 Pro";
+    content: "\f10d";
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  &:after {
+    font-family: "Font Awesome 5 Pro";
+    content: "\f10e";
+    font-size: 2rem;
+    font-weight: 900;
+  }
+}
+
+p {
+  &.author {
+    font-size: 1.25rem;
+
+    span {
+      top: -10px;
+      position: relative;
+      font-size: 1rem;
+    }
+  }
+}
+
+a {
+  color: $brand-blue;
+}
+
+footer {
+  a {
+    color: $white;
+  }
+}
