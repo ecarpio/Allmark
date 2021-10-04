@@ -1021,6 +1021,7 @@ header.sticky .header-logo img, header.inner .header-logo img {
   grid-template-columns: 40% 60%;
   padding: 0px;
   overflow: hidden;
+  border-top: 1px solid #053554;
 }
 
 .contacts .form {
