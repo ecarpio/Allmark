@@ -64,6 +64,7 @@ section {
 
 .modal-footer .content {
   border-bottom: 1px solid #dee2e6;
+  margin-top: 10px;
   padding-bottom: 20px;
   margin-bottom: 10px;
 }
