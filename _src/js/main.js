@@ -10,6 +10,10 @@ $(function() {
     $('.main-nav').toggleClass('active')
   })
 
+  $('.main-nav a').on('click', function(){
+    $('.main-nav').removeClass('active')
+  })
+
 
   // Simple Image Crossfade
   var images = ".splash-image > img" // image selector
@@ -92,11 +96,4 @@ $(function() {
     fitWidth: true,
     gutter:16,
   });
-
-  
-
-    
-    
-
-
 });

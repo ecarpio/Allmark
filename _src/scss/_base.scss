@@ -46,3 +46,38 @@ section {
 .splash-image{position:relative;}
 .splash-image img{position:absolute;z-index:1}
 .splash-image img.active{z-index:3}
+
+// Modal Override
+.modal-header {
+  padding:0px;
+    .close {
+      background:$white;
+      position: absolute;
+      right:0px;
+      opacity: 1;
+      height:60px;
+      width:60px;
+      border-radius: 50%;
+      z-index: 10;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .close:not(:disabled):not(.disabled):hover {
+      opacity: 1;
+    }
+}
+
+.modal-footer {
+  .content {
+    border-bottom:1px solid #dee2e6;
+    padding-bottom:20px;
+    margin-bottom:10px;
+  }
+}
+
+iframe {
+  border:0px;
+}

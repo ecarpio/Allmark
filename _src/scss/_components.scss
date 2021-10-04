@@ -26,9 +26,30 @@ html {
       }
   }
 
+  &.btn-secondary {
+    background-color: $dark-gray;
+    padding: 15px 30px;
+    border:0px;
+
+      &:hover {
+        background-color: lighten($main-blue, 10%);
+      }
+  }
+
+  &.btn-small {
+    padding:10px 20px;
+    font-size:1rem;
+  }
+
   &.btn-white {
     background-color: $white;
-    color: $black;
+    color: $main-blue;
+    font-weight: 700;
+
+      &:hover {
+        background-color:$secondary-blue;
+        color:$white;
+      }
   }
 
   &.btn-arrow {
