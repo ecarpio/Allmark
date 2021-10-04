@@ -78,7 +78,7 @@ header {
     display:none;
   }
 
-  &.sticky {
+  &.sticky, &.inner {
     position: fixed;
     top:0px;
     z-index: 100;
@@ -427,6 +427,11 @@ header {
       }
     }
   }
+}
+
+// Inner
+.content {
+  margin-top:60px;
 }
 
 // Contacts

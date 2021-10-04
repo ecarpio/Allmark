@@ -23,6 +23,9 @@ html {
 
 h1 {
   @extend .montserrat;
+  font-size:3rem;
+  font-weight: 700;
+  color:$main-blue;
 }
 
 h2 {

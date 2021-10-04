@@ -93,6 +93,12 @@ html {
   color: #333333;
 }
 
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #053554;
+}
+
 h2 {
   font-size: 2.125rem;
   font-weight: 700;
@@ -672,7 +678,7 @@ header .mobile-trigger {
   display: none;
 }
 
-header.sticky {
+header.sticky, header.inner {
   position: fixed;
   top: 0px;
   z-index: 100;
@@ -683,29 +689,29 @@ header.sticky {
   overflow: hidden;
 }
 
-header.sticky .header-logo img.white {
+header.sticky .header-logo img.white, header.inner .header-logo img.white {
   display: none;
 }
 
-header.sticky .header-logo img.color {
+header.sticky .header-logo img.color, header.inner .header-logo img.color {
   display: block;
 }
 
-header.sticky .grid {
+header.sticky .grid, header.inner .grid {
   grid-template-columns: [first] 200px [line2] auto [line3] 120px;
   align-items: center;
   grid-gap: 16px;
   width: 100%;
 }
 
-header.sticky .header-logo {
+header.sticky .header-logo, header.inner .header-logo {
   background-color: #ffffff;
   padding: 20px;
   width: 180px;
   margin-right: 30px;
 }
 
-header.sticky .header-logo img {
+header.sticky .header-logo img, header.inner .header-logo img {
   width: 120px;
 }
 
@@ -1003,6 +1009,10 @@ header.sticky .header-logo img {
 
 .our-team .team .item .title {
   height: 40px;
+}
+
+.content {
+  margin-top: 60px;
 }
 
 .contacts {
