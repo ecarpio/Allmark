@@ -76,6 +76,14 @@
     z-index: 100;
     position: relative;
     
+    &.sticky {
+      .grid {
+        grid-template-columns: [first] 200px [line2] auto;
+    
+      }
+    }
+
+    
     .grid {
       grid-template-columns: [first] 200px [line2] auto;
       align-items:center;

@@ -1146,6 +1146,9 @@ footer .legal .terms a:hover {
     z-index: 100;
     position: relative;
   }
+  header.sticky .grid {
+    grid-template-columns: [first] 200px [line2] auto;
+  }
   header .grid {
     grid-template-columns: [first] 200px [line2] auto;
     align-items: center;

@@ -101,7 +101,6 @@ $(function() {
   // Load images on modal load
 
   // Remove Images for now
-
   $(".modal img").not(":visible").each(function () {
     var $this = $(this);
     $this.attr('data-src', $this.attr('src'));
@@ -115,30 +114,5 @@ $(function() {
     })
 
   });
-
-
-    // or remove the whole attribute with $(this).removeAttr("src")
-
-
-    // $('.modal').on('shown.bs.modal', function (e) {
-    //   //console.log($(this).html())
-
-    //   var openedModal = $('.modal.show')
-      
-    //   console.log(openedModal.find('img'));
-
-    //   $('.modal.show').find("img").each(function () {
-    //     $(this).attr("src", $(this).data("src"))
-    //   //     // or add the attribute with $(this).attr("src", $(this).data("src"))
-    //   });
-
-      
-
-
-    
-
-  
-
-
 
 });
