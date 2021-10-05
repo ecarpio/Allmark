@@ -775,7 +775,8 @@ header.sticky .header-logo img, header.inner .header-logo img {
 .hero .hero-splash {
   top: 0px;
   padding: 120px 60px;
-  margin: 0px 100px;
+  margin: 0px 0px;
+  margin-left: 10%;
   width: 600px;
   text-align: center;
   position: relative;
@@ -1212,7 +1213,7 @@ footer .legal .terms a:hover {
     height: auto;
   }
   .hero .hero-splash {
-    margin: auto;
+    margin: auto !important;
     padding: 0px 0;
   }
 }

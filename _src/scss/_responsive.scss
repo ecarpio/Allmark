@@ -83,7 +83,7 @@
       }
     }
 
-    
+
     .grid {
       grid-template-columns: [first] 200px [line2] auto;
       align-items:center;
@@ -161,7 +161,7 @@
     height:auto;
 
     .hero-splash {
-      margin:auto;
+      margin:auto !important;
       padding:0px 0;
     }
   }
