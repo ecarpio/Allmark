@@ -469,6 +469,8 @@ footer {
   background-color:$main-blue;
   color:$white;
   padding:20px 0px;
+  font-weight: normal;
+
 
     .grid {
       grid-template-columns: 1fr 1fr;
@@ -483,6 +485,10 @@ footer {
 
             a {
               margin-left:20px;
+
+                &:hover {
+                  color:orange;
+                }
             }
         }
     }
@@ -493,6 +499,14 @@ footer {
       
         .terms {
           justify-self: end;
+        
+            a {
+              font-weight: normal;
+              &:hover {
+                color:$white;
+                text-decoration: underline;
+              }
+            }
         }
     }
 }
