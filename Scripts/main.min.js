@@ -90,12 +90,12 @@ $(function() {
   getScreenSize();
 
 
-  $('.property-grid').masonry({
-    // options
-    itemSelector: '.property-item',
-    fitWidth: true,
-    gutter:16,
-  });
+  // $('.property-grid').masonry({
+  //   // options
+  //   itemSelector: '.property-item',
+  //   fitWidth: true,
+  //   gutter:16,
+  // });
 
 
   // Load images on modal load
@@ -114,5 +114,36 @@ $(function() {
     })
 
   });
+
+
+  // Screen Resize End
+  var rtime;
+  var timeout = false;
+  var delta = 200;
+  $(window).resize(function() {
+      rtime = new Date();
+      if (timeout === false) {
+          timeout = true;
+          setTimeout(resizeend, delta);
+      }
+  });
+
+  function resizeend() {
+      if (new Date() - rtime < delta) {
+          setTimeout(resizeend, delta);
+      } else {
+          timeout = false;
+
+          $('.property-grid').masonry('reloadItems')
+
+          // $('.property-grid').masonry({
+          //   // options
+          //   itemSelector: '.property-item',
+          //   fitWidth: true,
+          //   gutter:16,
+          // });
+      }               
+  }
+
 
 });

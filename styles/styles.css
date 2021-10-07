@@ -15,7 +15,7 @@ html {
 }
 
 section {
-  padding: 96px 0px;
+  padding: 160px 0px;
 }
 
 .grid {
@@ -722,11 +722,13 @@ header.sticky .header-logo img, header.inner .header-logo img {
   position: relative;
   padding-top: 0px;
   padding-bottom: 0px;
+  height: 800px;
 }
 
 .hero .carousel-item {
   position: relative;
   padding: 100px 0px 0px 0px;
+  height: 800px;
 }
 
 .hero .image-container {
@@ -773,13 +775,13 @@ header.sticky .header-logo img, header.inner .header-logo img {
 }
 
 .hero .hero-splash {
-  top: 0px;
+  top: 100px;
   padding: 120px 60px;
   margin: 0px 0px;
   margin-left: 10%;
   width: 600px;
   text-align: center;
-  position: relative;
+  position: absolute;
   z-index: 10;
   display: block;
 }
@@ -856,7 +858,8 @@ header.sticky .header-logo img, header.inner .header-logo img {
 }
 
 .properties .property-grid {
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 470px));
 }
 
 .properties .property-item {
@@ -892,10 +895,6 @@ header.sticky .header-logo img, header.inner .header-logo img {
   justify-content: center;
 }
 
-.properties .property-item.property:nth-child(2) {
-  margin-top: 64px;
-}
-
 .properties .property-item.property .property-info {
   position: relative;
   z-index: 10;
@@ -905,7 +904,8 @@ header.sticky .header-logo img, header.inner .header-logo img {
   background-color: #ffffff;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: 1.5fr auto;
+  align-items: center;
   grid-gap: 16px;
 }
 
@@ -917,6 +917,12 @@ header.sticky .header-logo img, header.inner .header-logo img {
   color: #053554;
   font-size: 1.125rem;
   font-weight: 700;
+}
+
+.properties .property-item.property .property-info .btn {
+  width: 100%;
+  min-width: 130px;
+  max-height: 56px;
 }
 
 .our-company quote {
@@ -1210,10 +1216,12 @@ footer .legal .terms a:hover {
     display: block;
   }
   .hero {
-    height: auto;
+    height: 700px !important;
+    overflow: hidden;
   }
   .hero .hero-splash {
-    margin: auto !important;
+    margin-left: 50%;
+    transform: translateX(-50%) !important;
     padding: 0px 0;
   }
 }
@@ -1323,11 +1331,6 @@ footer .legal .terms a:hover {
 }
 
 @media (max-width: 640px) {
-  .hero .hero-splash {
-    margin: auto;
-    padding: 0px 0;
-    width: 100%;
-  }
   footer .legal {
     display: block;
   }
@@ -1338,6 +1341,13 @@ footer .legal .terms a:hover {
 }
 
 @media (max-width: 480px) {
+  .hero {
+    height: 500px !important;
+  }
+  .hero .hero-splash {
+    top: 50px;
+    width: 400px;
+  }
   .hero .hero-splash h1 {
     font-size: 24px;
   }
@@ -1347,6 +1357,15 @@ footer .legal .terms a:hover {
   .hero .hero-splash .value {
     font-size: 40px;
     margin-bottom: 10px;
+  }
+  .hero .carousel {
+    height: 500px;
+  }
+  .hero .carousel .carousel-inner {
+    height: 500px;
+  }
+  .hero .carousel .carousel-inner .carousel-item {
+    height: 500px;
   }
   .properties .property-item .property-info {
     display: block;

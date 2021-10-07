@@ -158,13 +158,17 @@
 
   .hero {
 
-    height:auto;
+    height:700px !important;
+    overflow: hidden;
 
     .hero-splash {
-      margin:auto !important;
+      margin-left:50%;
+      transform: translateX(-50%) !important;
       padding:0px 0;
     }
   }
+
+
 
 }
 
@@ -302,14 +306,6 @@
 
 @media (max-width: 640px) { 
 
-  .hero {
-    .hero-splash {
-      margin:auto;
-      padding:0px 0;
-      width:100%;
-    }
-  }
-
   footer {
     .legal {
       display: block;
@@ -326,7 +322,10 @@
 @media (max-width: 480px) {
 
   .hero {
+    height:500px !important;
     .hero-splash {
+      top:50px;
+      width:400px;
       h1 {
         font-size:24px;
       }
@@ -339,6 +338,17 @@
         font-size:40px;
         margin-bottom:10px;
       }
+    }
+
+    .carousel {
+      height:500px;
+        .carousel-inner {
+          height:500px;
+
+            .carousel-item {
+              height:500px;
+            }
+        }
     }
   }
 
