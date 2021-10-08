@@ -31,6 +31,39 @@ html {
 
 section {
   padding:160px 0px;
+
+    &.content {
+      padding-top:100px;
+
+        h1 {
+          margin-bottom:0px;
+        }
+
+        h2 {
+          font-size:1.875rem;
+          margin-bottom:0;
+          &:after {
+            display: none;
+            color:$black;
+          }
+        }
+
+        h3 {
+          font-size:1.875rem;
+          margin-bottom:0;
+          &:after {
+            display: none;
+            color:$black;
+          }
+        }
+
+        h4 {
+          font-size:1.125rem;
+          margin-bottom:0;
+          font-weight: 700;
+          margin-top:5px;
+        }
+    }
 }
 
 // CSS GRID
@@ -81,4 +114,20 @@ section {
 
 iframe {
   border:0px;
+}
+
+// Property Carousel
+.content {
+  .carousel {
+    max-height:800px;
+    max-width:1440px;
+    margin:auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.25);
+
+      .carousel-inner {
+        max-height:800px;
+      }
+  }
 }

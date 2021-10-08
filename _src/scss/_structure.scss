@@ -194,7 +194,7 @@ header {
         background-color:$white;
         color:$main-blue;
         display:inline-block;
-        padding:10px;
+        padding:10px 15px;
         text-transform: uppercase;
         margin:0px;
         font-size:30px;
@@ -203,10 +203,10 @@ header {
       }
 
       h2 {
-        background-color:$main-blue;
+        background-color:$black;
         color:$white;
         font-size:18px;
-        padding:10px;
+        padding:10px 15px;
         margin-bottom:0px;
         display: inline-block;
         &:after {
@@ -233,7 +233,7 @@ header {
 // Mini Contact
 .mini-contact {
   padding:10px;
-  background-color:$main-blue;
+  background-color:$black;
   color:$white;
     .container {
       padding:10px;
@@ -347,6 +347,33 @@ header {
   
 }
 
+.back-to-home {
+  font-size:1.125rem;
+  font-weight:700;
+  margin-bottom:20px;
+}  
+
+.property-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  grid-gap:16px;
+
+    .property-contact{
+      justify-self: end;
+      align-items: end;
+      text-align: right;
+    }
+}
+
+.property-description {
+  margin-top:10px;
+  p {
+    font-size:1.25rem;
+  }
+  
+}
+
 //Our Company
 .our-company {
   quote {
@@ -456,7 +483,7 @@ header {
   grid-template-columns: 40% 60%;
   padding:0px;
   overflow: hidden;
-  border-top:1px solid $main-blue;
+  border-top:1px solid #e1e1e1;
 
     .form {
       padding:96px 60px;

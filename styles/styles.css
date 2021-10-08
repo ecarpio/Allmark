@@ -18,6 +18,41 @@ section {
   padding: 160px 0px;
 }
 
+section.content {
+  padding-top: 100px;
+}
+
+section.content h1 {
+  margin-bottom: 0px;
+}
+
+section.content h2 {
+  font-size: 1.875rem;
+  margin-bottom: 0;
+}
+
+section.content h2:after {
+  display: none;
+  color: #000000;
+}
+
+section.content h3 {
+  font-size: 1.875rem;
+  margin-bottom: 0;
+}
+
+section.content h3:after {
+  display: none;
+  color: #000000;
+}
+
+section.content h4 {
+  font-size: 1.125rem;
+  margin-bottom: 0;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
 .grid {
   display: grid;
 }
@@ -71,6 +106,19 @@ section {
 
 iframe {
   border: 0px;
+}
+
+.content .carousel {
+  max-height: 800px;
+  max-width: 1440px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.content .carousel .carousel-inner {
+  max-height: 800px;
 }
 
 .montserrat, h1, h2, h3, h4, header .main-nav, .hero .hero-splash .value, .mini-contact .container .contact-blurb, .our-company quote {
@@ -790,7 +838,7 @@ header.sticky .header-logo img, header.inner .header-logo img {
   background-color: #ffffff;
   color: #053554;
   display: inline-block;
-  padding: 10px;
+  padding: 10px 15px;
   text-transform: uppercase;
   margin: 0px;
   font-size: 30px;
@@ -799,10 +847,10 @@ header.sticky .header-logo img, header.inner .header-logo img {
 }
 
 .hero .hero-splash h2 {
-  background-color: #053554;
+  background-color: #000000;
   color: #ffffff;
   font-size: 18px;
-  padding: 10px;
+  padding: 10px 15px;
   margin-bottom: 0px;
   display: inline-block;
 }
@@ -825,7 +873,7 @@ header.sticky .header-logo img, header.inner .header-logo img {
 
 .mini-contact {
   padding: 10px;
-  background-color: #053554;
+  background-color: #000000;
   color: #ffffff;
 }
 
@@ -924,6 +972,33 @@ header.sticky .header-logo img, header.inner .header-logo img {
   width: 100%;
   min-width: 130px;
   max-height: 56px;
+}
+
+.back-to-home {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.property-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  grid-gap: 16px;
+}
+
+.property-heading .property-contact {
+  justify-self: end;
+  align-items: end;
+  text-align: right;
+}
+
+.property-description {
+  margin-top: 10px;
+}
+
+.property-description p {
+  font-size: 1.25rem;
 }
 
 .our-company quote {
@@ -1029,7 +1104,7 @@ header.sticky .header-logo img, header.inner .header-logo img {
   grid-template-columns: 40% 60%;
   padding: 0px;
   overflow: hidden;
-  border-top: 1px solid #053554;
+  border-top: 1px solid #e1e1e1;
 }
 
 .contacts .form {
@@ -1154,7 +1229,7 @@ footer .legal .terms a:hover {
     z-index: 100;
     position: relative;
   }
-  header.sticky .grid {
+  header.sticky .grid, header.inner .grid {
     grid-template-columns: [first] 200px [line2] auto;
   }
   header .grid {
@@ -1224,6 +1299,19 @@ footer .legal .terms a:hover {
     margin-left: 50%;
     transform: translateX(-50%) !important;
     padding: 0px 0;
+  }
+  .content .property-heading {
+    display: grid;
+    align-items: baseline;
+  }
+  .content .property-heading h1 {
+    font-size: 2rem;
+  }
+  .content .property-heading h3 {
+    font-size: 1.25rem;
+  }
+  .content .property-heading .property-contact {
+    text-align: right;
   }
 }
 
@@ -1329,9 +1417,33 @@ footer .legal .terms a:hover {
   .work .docitt-mobile {
     max-width: 109px !important;
   }
+  .content .property-heading {
+    display: block;
+  }
+  .content .property-heading .property-contact {
+    margin-top: 5px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 640px) {
+  .content .property-heading {
+    display: block;
+    align-items: baseline;
+    justify-content: start;
+  }
+  .content .property-heading h3 {
+    margin-bottom: 5px;
+  }
+  .content .property-heading .property-contact {
+    justify-self: start;
+    margin-bottom: 20px;
+  }
+  .content .property-heading .property-contact h4 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
   footer .legal {
     display: block;
   }
