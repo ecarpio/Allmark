@@ -23,12 +23,14 @@ section.content {
 }
 
 section.content h1 {
-  margin-bottom: 0px;
+  margin-bottom: 5px;
+  font-size: 2.25rem;
 }
 
 section.content h2 {
   font-size: 1.875rem;
   margin-bottom: 0;
+  color: #000000;
 }
 
 section.content h2:after {
@@ -37,8 +39,8 @@ section.content h2:after {
 }
 
 section.content h3 {
-  font-size: 1.875rem;
-  margin-bottom: 0;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 section.content h3:after {
@@ -1143,6 +1145,7 @@ footer .grid {
 }
 
 footer .grid .social {
+  display: none;
   font-size: 1.5rem;
   justify-self: end;
   align-self: end;
@@ -1306,6 +1309,9 @@ footer .legal .terms a:hover {
   }
   .content .property-heading h1 {
     font-size: 2rem;
+  }
+  .content .property-heading h2 {
+    font-size: 1.5rem;
   }
   .content .property-heading h3 {
     font-size: 1.25rem;
