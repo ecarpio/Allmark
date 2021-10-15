@@ -901,6 +901,11 @@ header.sticky .header-logo img, header.inner .header-logo img {
   display: inline-block;
   margin-left: 20px;
   color: #ffffff;
+  font-weight: bold;
+}
+
+.mini-contact .container .contact-info span a {
+  color: #ffffff;
 }
 
 .properties {
