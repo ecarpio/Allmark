@@ -26,6 +26,7 @@
     "popper.js": "^1.14.4"
   },
   "dependencies": {
+    "@material-icons/svg": "^1.0.18",
     "all": "0.0.0",
     "aos": "^3.0.0-beta.6",
     "flickity": "^2.1.2",
