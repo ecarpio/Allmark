@@ -54,6 +54,8 @@ gulp.task("compress", function() {
       config.node + "/bootstrap/dist/js/bootstrap.min.js",
       config.source + "/js/vendors/jquery-mobile.min.js",
       config.node + "/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js",
+      config.node + "/jquery-focusable/jquery.focusable.min.js",
+      config.node + "/jquery-keyboard-trap/jquery.keyboardtrap.min.js",
       config.node + "/aos/dist/aos.js",
       config.node + '/masonry-layout/dist/masonry.pkgd.min.js',
       config.node + "/@fortawesome/fontawesome-pro/js/all.min.js",

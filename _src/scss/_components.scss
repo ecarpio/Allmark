@@ -12,7 +12,7 @@ html {
   @extend .roboto;
 
   &:focus {
-    outline: none;
+    outline: 1px solid #ffffff;
     box-shadow: none;
   }
 
@@ -23,6 +23,10 @@ html {
 
       &:hover {
         background-color: lighten($main-blue, 10%);
+      }
+
+      &:focus {
+        outline: 1px solid $main-blue;
       }
   }
 

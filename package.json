@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   },
   "author": "",
   "license": "ISC",
@@ -30,8 +34,14 @@
     "all": "0.0.0",
     "aos": "^3.0.0-beta.6",
     "flickity": "^2.1.2",
+    "focus-trap": "^6.7.1",
+    "graceful-fs": {
+      "version": "4.2.2"
+    },
     "gulp4": "^4.0.2",
     "handlebars": "^4.1.2",
+    "jquery-focusable": "^1.0.1",
+    "jquery-keyboard-trap": "^1.0.1",
     "jquery-mobile": "^1.5.0-alpha.1",
     "jquery-typeahead": "^2.10.4",
     "jquery-ui-dist": "^1.12.1",

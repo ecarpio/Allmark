@@ -113,37 +113,45 @@ $(function() {
       $(this).attr('src', $(this).attr('data-src'));
     })
 
+    $('#main-page').attr('aria-hidden', 'true');
+
+  });
+
+  $('.modal').on('hide.bs.modal', function (e) {
+    $('#main-page').attr('aria-hidden', 'false');
   });
 
 
-  // Screen Resize End
-  var rtime;
-  var timeout = false;
-  var delta = 200;
-  $(window).resize(function() {
-      rtime = new Date();
-      if (timeout === false) {
-          timeout = true;
-          setTimeout(resizeend, delta);
-      }
-  });
+  // // Screen Resize End
+  // var rtime;
+  // var timeout = false;
+  // var delta = 200;
+  // $(window).resize(function() {
+  //     rtime = new Date();
+  //     if (timeout === false) {
+  //         timeout = true;
+  //         setTimeout(resizeend, delta);
+  //     }
+  // });
 
-  function resizeend() {
-      if (new Date() - rtime < delta) {
-          setTimeout(resizeend, delta);
-      } else {
-          timeout = false;
+  // function resizeend() {
+  //     if (new Date() - rtime < delta) {
+  //         setTimeout(resizeend, delta);
+  //     } else {
+  //         timeout = false;
 
-          $('.property-grid').masonry('reloadItems')
+  //         $('.property-grid').masonry('reloadItems')
 
-          // $('.property-grid').masonry({
-          //   // options
-          //   itemSelector: '.property-item',
-          //   fitWidth: true,
-          //   gutter:16,
-          // });
-      }               
-  }
+  //         // $('.property-grid').masonry({
+  //         //   // options
+  //         //   itemSelector: '.property-item',
+  //         //   fitWidth: true,
+  //         //   gutter:16,
+  //         // });
+  //     }               
+  // }
+
+  $.trapKeyboard('[role=dialog]');
 
 
 });
