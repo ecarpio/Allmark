@@ -264,9 +264,25 @@ header {
     }
 }
 
+// Objectives
+.objectives {
+  background-color:$white;
+  padding:80px 0px;
+  p {
+    font-size:1.25rem;
+  }
+
+}
+
 // Properties
 .properties {
   background-color: $light-blue;
+
+  .intro {
+    p {
+      font-size:1.25rem;
+    }
+  }
   
   .property-grid {
     //margin:0 auto;
@@ -381,13 +397,14 @@ header {
 //Our Company
 .our-company {
   quote {
+    @extend .montserrat;
     font-weight: 700;
     font-style: italic;
     color:$main-blue;
-    font-size:1.25rem;
-    line-height: 1.25rem;
+    font-size:2.25rem;
+    line-height: 2.25rem;
     position: relative;
-    margin:40px 40px 40px 30px;
+    margin:40px 0px 40px 30px;
     display: inline-block;
       &:before {
         content:'"';
@@ -403,8 +420,8 @@ header {
         display:block;
         font-size: 5rem;
         position: absolute;
-        bottom:30px;
-        right:0px;
+        top:30px;
+        right:-40px;
       } 
   }
 
@@ -417,9 +434,8 @@ header {
         position: absolute;
         left:50%;
         transform: translateX(-50%);
-        top:0px;
-        bottom:0px;
         height:100%;
+        bottom:0px;
       }
   }
 }
@@ -428,6 +444,15 @@ header {
 // Our Team
 .our-team {
   background-color:$light-blue;
+
+  .intro {
+    align-self: start;
+    text-align: left;
+      p {
+        font-size: 1.25rem !important;
+      }
+  }
+
   .team {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     justify-content: center;
@@ -439,11 +464,6 @@ header {
       margin-bottom:32px;
       justify-self: center;
       text-align: center;
-
-      &.intro {
-        align-self: start;
-        text-align: left;
-      }
 
       .avatar {
         background-color:$black;

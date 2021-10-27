@@ -115,12 +115,12 @@ iframe {
   max-height: 800px;
 }
 
-.montserrat, h1, h2, h3, h4, header .main-nav, .hero .hero-splash .value, .mini-contact .container .contact-blurb {
+.montserrat, h1, h2, h3, h4, header .main-nav, .hero .hero-splash .value, .mini-contact .container .contact-blurb, .our-company quote {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
 }
 
-.montserrat strong, h1 strong, h2 strong, h3 strong, h4 strong, header .main-nav strong, .hero .hero-splash .value strong, .mini-contact .container .contact-blurb strong {
+.montserrat strong, h1 strong, h2 strong, h3 strong, h4 strong, header .main-nav strong, .hero .hero-splash .value strong, .mini-contact .container .contact-blurb strong, .our-company quote strong {
   font-weight: 700;
 }
 
@@ -908,8 +908,21 @@ header.sticky .header-logo img, header.inner .header-logo img {
   color: #ffffff;
 }
 
+.objectives {
+  background-color: #ffffff;
+  padding: 80px 0px;
+}
+
+.objectives p {
+  font-size: 1.25rem;
+}
+
 .properties {
   background-color: #f2fdff;
+}
+
+.properties .intro p {
+  font-size: 1.25rem;
 }
 
 .properties .property-grid {
@@ -1012,10 +1025,10 @@ header.sticky .header-logo img, header.inner .header-logo img {
   font-weight: 700;
   font-style: italic;
   color: #053554;
-  font-size: 1.25rem;
-  line-height: 1.25rem;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
   position: relative;
-  margin: 40px 40px 40px 30px;
+  margin: 40px 0px 40px 30px;
   display: inline-block;
 }
 
@@ -1033,8 +1046,8 @@ header.sticky .header-logo img, header.inner .header-logo img {
   display: block;
   font-size: 5rem;
   position: absolute;
-  bottom: 30px;
-  right: 0px;
+  top: 30px;
+  right: -40px;
 }
 
 .our-company .splash-image {
@@ -1047,13 +1060,21 @@ header.sticky .header-logo img, header.inner .header-logo img {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 0px;
-  bottom: 0px;
   height: 100%;
+  bottom: 0px;
 }
 
 .our-team {
   background-color: #f2fdff;
+}
+
+.our-team .intro {
+  align-self: start;
+  text-align: left;
+}
+
+.our-team .intro p {
+  font-size: 1.25rem !important;
 }
 
 .our-team .team {
@@ -1069,11 +1090,6 @@ header.sticky .header-logo img, header.inner .header-logo img {
   margin-bottom: 32px;
   justify-self: center;
   text-align: center;
-}
-
-.our-team .team .item.intro {
-  align-self: start;
-  text-align: left;
 }
 
 .our-team .team .item .avatar {
